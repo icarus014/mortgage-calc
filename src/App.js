@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Container maxWidth="xl" sx={{ mt: 4 }}>
-        <Grid container spacing={5}>
+        <Grid container spacing={5} alignItems="center">
           <Grid item md={6} xs={12}>
             <SliderSelect data={data} setData={setData} />
             <TenureSelect data={data} setData={setData} />
