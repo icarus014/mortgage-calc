@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "@mui/material/Slider";
 
-const SliderComponent = ({defaultValue, min, max, step}) => {
+const SliderComponent = ({defaultValue, min, max, step, onChange, value}) => {
   return (
     <div>
       <Slider
@@ -12,6 +12,8 @@ const SliderComponent = ({defaultValue, min, max, step}) => {
         valueLabelDisplay="auto"
         marks 
         step={step} 
+        onChange={onChange}
+        value={value}
       />
     </div>
   );
