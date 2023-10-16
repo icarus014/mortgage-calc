@@ -1,6 +1,6 @@
 # React Mortgage Calculator
 
-This project was created using ReactJS and Material UI
+This project was created using ReactJS.
 
 ## What's this for 
 This project was created to practice the use of UseStates Hooks, Functional Components in React, and handling props. 
