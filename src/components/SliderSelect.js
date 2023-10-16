@@ -1,13 +1,14 @@
-import React from 'react'
-import SliderComponent from './common/SliderComponent'
-
+import React, { Fragment } from "react";
+import SliderComponent from "./common/SliderComponent";
 
 const SliderSelect = () => {
   return (
-    <div>
-      <SliderComponent/>
-    </div>
-  )
-}
+    <Fragment>
+      <SliderComponent />
+      <SliderComponent />
+      <SliderComponent />
+    </Fragment>
+  );
+};
 
-export default SliderSelect
+export default SliderSelect;
