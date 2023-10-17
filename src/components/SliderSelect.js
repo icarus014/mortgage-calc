@@ -5,7 +5,7 @@ import { Stack } from "@mui/material";
 const SliderSelect = ({ data, setData }) => {
   console.log(data);
 
-  const bank_limit = 10000;
+  const bank_limit = 10000000;
   return (
     <Stack my={1.4}>
       <SliderComponent
@@ -15,7 +15,12 @@ const SliderSelect = ({ data, setData }) => {
         defaultValue={data.homeValue}
         step={100}
         onChange={(e, value) => {
-          setData({ ...data,downPayment: value *0.2, loanAmount:value * 0.8, homeValue: value });
+          setData({
+            ...data,
+            downPayment: value * 0.2,
+            loanAmount: value * 0.8,
+            homeValue: value,
+          });
         }}
         unit="$"
         amount={data.homeValue}
@@ -27,7 +32,13 @@ const SliderSelect = ({ data, setData }) => {
         defaultValue={data.downPayment}
         value={data.downPayment}
         step={100}
-        onChange={(e, value) => setData({ ...data, loanAmount:(data.homeValue - value),downPayment: value })}
+        onChange={(e, value) =>
+          setData({
+            ...data,
+            loanAmount: data.homeValue - value,
+            downPayment: value,
+          })
+        }
         unit="$"
         amount={data.downPayment}
       />
@@ -38,7 +49,13 @@ const SliderSelect = ({ data, setData }) => {
         defaultValue={data.loanAmount}
         value={data.loanAmount}
         step={100}
-        onChange={(e, value) => setData({ ...data, downPayment:(data.homeValue - value), loanAmount: value })}
+        onChange={(e, value) =>
+          setData({
+            ...data,
+            downPayment: data.homeValue - value,
+            loanAmount: value,
+          })
+        }
         unit="$"
         amount={data.loanAmount}
       />

@@ -10,7 +10,7 @@ const Result = ({ data }) => {
 
 const totalLoanMonths = loanTerm * 12 //60 months = 5 yrs
 
-const interestPerMonth = interestRate /100 /12; //100@12% for 1 year
+const interestPerMonth = interestRate /100 / 12; //100 @ 12% for 1 year
 
 const monthlyPayment = (loanAmount * interestPerMonth * (1 + interestPerMonth) ** totalLoanMonths) /
 (((1+interestPerMonth)**totalLoanMonths - 1));
