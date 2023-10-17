@@ -5,7 +5,7 @@ import { Stack } from "@mui/material";
 const SliderSelect = ({ data, setData }) => {
   console.log(data);
 
-  const bank_limit = 10000000;
+  const bank_limit = 1000000;
   return (
     <Stack my={1.4}>
       <SliderComponent
@@ -13,7 +13,7 @@ const SliderSelect = ({ data, setData }) => {
         min={1000}
         max={bank_limit}
         defaultValue={data.homeValue}
-        step={100}
+        step={1000}
         onChange={(e, value) => {
           setData({
             ...data,
